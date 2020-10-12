@@ -6,15 +6,27 @@
 - [fp16](#fp16)
 
 ## setup
-GPU: GTX 2080ti * 8
-docker image: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
-tensorflow version: 2.3
+- GPU: GTX 2080ti * 8
+- docker image: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+- tensorflow version: 2.3
+- script: `https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks` (no longer maintained)
 
 ## fp32
-### command
-`python tf_cnn_benchmarks.py --use_fp32`
+- command: `python tf_cnn_benchmarks.py --num_gpus=1 --batch_size=32 --model=resnet50`
+- result:
+  - throughput:
+```
+total images/sec: 281.12
+```
 
+## fp16 benchmark
+### fp16 benchmark1
+- command: `python tf_cnn_benchmarks.py --num_gpus=1 --batch_size=32 --model=resnet50 --use_fp16`
+- result:
+  - throughput:
+```
+total images/sec: 605.40
+```
 
-## fp16
-### command 
-`python tf_cnn_benchmarks.py --use_fp16`
+## Observation:
+fp16/fp32 throughput ratio is 2.15x 
