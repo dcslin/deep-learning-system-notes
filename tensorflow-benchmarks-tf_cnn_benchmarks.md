@@ -1,4 +1,4 @@
-# benchmark tensorflow cnn network with fp16 and fp32
+# benchmark tensorflow resnet50 with fp16 and fp32
 
 ## contents:
 - [setup](#setup)
