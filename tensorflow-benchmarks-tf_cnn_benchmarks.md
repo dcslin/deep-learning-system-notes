@@ -21,7 +21,6 @@ total images/sec: 281.12
 ```
 
 ## fp16 benchmark
-### fp16 benchmark1
 - command: `python tf_cnn_benchmarks.py --num_gpus=1 --batch_size=32 --model=resnet50 --use_fp16`
 - result:
   - throughput:
