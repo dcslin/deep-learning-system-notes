@@ -10,7 +10,7 @@
 - GPU: GTX 2080ti * 8
 - docker image: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 - tensorflow version: 2.3
-- script: `https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks` (no longer maintained)
+- script: [tensorflow/benchmarks](https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks) (no longer maintained)
 
 ## fp32
 - command: `python tf_cnn_benchmarks.py --num_gpus=1 --batch_size=32 --model=resnet50`
