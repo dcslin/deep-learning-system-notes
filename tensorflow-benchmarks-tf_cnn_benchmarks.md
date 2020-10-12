@@ -4,6 +4,7 @@
 - [setup](#setup)
 - [fp32](#fp32)
 - [fp16](#fp16)
+- [Observation](#observation)
 
 ## setup
 - GPU: GTX 2080ti * 8
